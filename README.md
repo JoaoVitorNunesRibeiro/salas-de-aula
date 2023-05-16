@@ -22,8 +22,8 @@ Rode os programas no "Programiz" e em seguida de as informações que o programa
 ![Android Studio](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 
 Bibliotecas Utilizadas:
-#include <iostream>
-#include <vector>
+#include iostream
+#include vector
 Linguagem:
 C++
 
