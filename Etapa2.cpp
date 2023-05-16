@@ -11,16 +11,19 @@ int main() {
     // o índice 'i' é usado para acessar o elemento correto do vetor, onde 'i' varia de 0 a 'Salas - 1'.
     vector<int> alunosPorSala(Salas);
     int Alunos = 0;
-    
+    //declaramos a variável 'Alunos' e a inicializamos como zero 
+    //em seguida, usamos um loop 'for' para iterar sobre cada sala
+    //dentro do loop, pedimos ao usuário que digite o número de alunos na sala atual usando 'cout' e 'cin', e armazenamos o valor no vetor 'alunosPorSala'
+    //também atualizamos a variável 'Alunos' somando o número de alunos na sala atual a cada iteração do loop.
     for (int i = 0; i < Salas; i++) {
         cout << "Digite a quantidade de alunos na sala " << (i + 1) << ": ";
         cin >> alunosPorSala[i];
         Alunos += alunosPorSala[i];
     }
-
+    //usado "static_cast" para converter um valor de um tipo para outro tipo compativel. assim, usamos ele para promover "Alunos" de 'int' para 'double' antes de realizar a divisão para calcular a média.
     double mediaAlunos = static_cast<double>(Alunos) / Salas;
     cout << "A média de alunos por sala é: " << mediaAlunos << endl;
-
+    //exibimos uma mensagem inicial para indicar quais salas têm um número de alunos acima da média. Em seguida, percorremos novamente o vetor 'alunosPorSala' usando um loop
     cout << "Salas com número de alunos acima da média:" << endl;
     for (int i = 0; i < Salas; i++) {
         if (alunosPorSala[i] > mediaAlunos) {
